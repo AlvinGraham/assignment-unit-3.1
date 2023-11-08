@@ -126,9 +126,6 @@ let firstColor = colors.shift();
 console.log('The colors array with the first colore removed is now', colors);
 console.log('The colore removed from the beginning of the array was', firstColor);
 
-
-
-
 // STRETCH GOALS:
 
 let gems = ['Topaz', 'Citrine', 'Diamond', 'Emerald', 'Iolite', 'Tanzanite'];
@@ -136,10 +133,17 @@ let gems = ['Topaz', 'Citrine', 'Diamond', 'Emerald', 'Iolite', 'Tanzanite'];
 // 5.a (STRETCH) TODO: Replace the second gem with 'Tourmaline'.
 //      Remember to console.log the updated array.
 
+gems.splice(1, 1, 'Tourmaline');
+console.log('New array with replacement:', gems);
+
 
 // 5.b (STRETCH) TODO: Sort your gems array in reverse alphabetical order.
 //     Please console.log the sorted array.
 
+gems.sort();
+gems.reverse();
+// gems.sort().reverse(); does the same thing but maybe not as readable?
+console.log('Array gems in reverse alphabetic order:', gems);
 
 // 5.c (STRETCH) TODO: Create a variable `gemString` and assign it a string value
 //     that's made up of each value from the `gems` array, but separated by the
@@ -149,6 +153,9 @@ let gems = ['Topaz', 'Citrine', 'Diamond', 'Emerald', 'Iolite', 'Tanzanite'];
 //     🔥 You'll need to research the .join Array method. 🔥
 //     Don't forget to console.log `gemString`...
 
+let gemString = gems.join(' and ');
+console.log('Array gems joined with seperator:', gemString);
+
 
 // 5.d (STRETCH) TODO: Make a new array `colorfulGems` that combines 
 //     the gems array with the colors array.
@@ -156,6 +163,8 @@ let gems = ['Topaz', 'Citrine', 'Diamond', 'Emerald', 'Iolite', 'Tanzanite'];
 //       ['Tourmaline', 'Topaz', 'Tanzanite', 'Iolite', 'Emerald', 'Diamond', 'yellow', 'green']
 //     Now, console.log the new array.
 
+let colorfulGems = gems.concat(colors);
+console.log('Combination of gems and colors arrays:', colorfulGems);
 
 
 
